@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宋雅然生日快乐</title>
+    <link href="../css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script src="../js/breathing-halftone.pkgd.js"></script>
+</head>
+<body>
+    <div>
+        图片一张
+    </div>
+    <img src="../img/psb.jpg" data-src="../img/psb.jpg" />
+</body>
+<script>
+    // 获取图片
+    // 通过jquery
+    var img = $('img')[0];
+  
+    
+    // 初始化创建
+    new BreathingHalftone( img, {  
+        
+        dotSize: 1/40,  
+        dotSizeThreshold: 0.05,   
+        initVelocity: 0.02, 
+        oscPeriod: 3,
+        oscAmplitude: 0.2,
+        isAdditive: false,
+        isRadial: false,
+        channels: [ 'red', 'green', 'blue' ],
+        isChannelLens: true,             
+        friction: 0.06,
+        hoverDiameter: 0.3,
+        hoverForce: -0.02,
+        activeDiameter: 0.6,
+        activeForce: 0.01
+    });
+</script>
+</html>
